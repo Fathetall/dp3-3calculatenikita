@@ -1,0 +1,166 @@
+/* Vispārējais stils */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Kalkulators */
+.calculator {
+    background-color: #2b2b40;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 320px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    font-size: 1.8rem;
+    color: #ffffff;
+    background-color: #1e1e2f;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#display:focus {
+    outline: none;
+}
+
+/* Pogu izkārtojums */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #393953;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #52527e;
+}
+
+button:active {
+    background-color: #6b6ba3;
+}
+
+/* Speciālo pogu stils */
+button:nth-child(4n),
+button#clear {
+    background-color: #ff4d4d;
+}
+
+button:nth-child(4n):hover,
+button#clear:hover {
+    background-color: #ff6666;
+}
+
+button:nth-child(16) {
+    background-color: #4caf50;
+}
+
+button:nth-child(16):hover {
+    background-color: #66bb6a;
+}
+
+/* Vēsture */
+.history {
+    margin-top: 20px;
+    background-color: #2b2b40;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 320px;
+}
+
+.history h2 {
+    font-size: 1.5rem;
+    margin: 0 0 15px;
+    text-align: center;
+    color: #ff9e9e;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#history-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #393953;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+#history-list li button {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+#history-list li button:hover {
+    background-color: #ff6666;
+}
+
+button#clear-history {
+    background-color: #ff4d4d;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button#clear-history:hover {
+    background-color: #ff6666;
+}
+button:nth-child(18), /* Kvadrātsakne */
+button:nth-child(19), /* Kvadrāts */
+button:nth-child(20) { /* Procenti */
+    background-color: #4caf50;
+}
+
+button:nth-child(18):hover,
+button:nth-child(19):hover,
+button:nth-child(20):hover {
+    background-color: #66bb6a;
+}
